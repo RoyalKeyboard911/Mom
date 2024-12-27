@@ -7,10 +7,8 @@
     <title>Happy Birthday</title>
     <style>
         .image1 {
-
             max-width: 100%;
-            width: 750;
-            /* The image will always resize dynamically to fit its container, but it won't exceed 500px in width. */
+            width: 750px;
             height: auto;
             margin-top: -5%;
             margin-bottom: -7%;
@@ -18,16 +16,17 @@
 
         .heart {
             max-width: 100%;
-            width: 600;
+            width: 600px;
             height: auto;
         }
-        .poster {
 
+        .poster {
             width: 600px;
             max-width: 100%;
             height: auto;
             margin-bottom: 200px;
         }
+
         .vr-park {
             max-width: 85%;
             width: 600px;
@@ -35,7 +34,6 @@
         }
 
         .bday-image {
-
             width: 500px;
             max-width: 100%;
             height: auto;
@@ -44,19 +42,54 @@
         body {
             font-family: cursive;
             text-align: center;
-            /* background-color: antiquewhite; */
             font-size: 130%;
+        }
+
+        .bday-image {
+            transition: transform 150ms ease;
+            /* Smooth transition */
+        }
+
+        .bday-image:hover,
+        .bday-image:active {
+            transform: scale(2);
+            /* Enlarge on hover or touch */
+        }
 
 
+
+        /* Sliding animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+
+
+        .slide-in {
+            animation: slideIn 1s ease-out;
+            animation-delay: 1s;
         }
     </style>
 </head>
 
 <body>
-    <img class="image1"
+    <img class="image1 slide-in"
         src="https://img.freepik.com/premium-vector/colorful-happy-birthday-lettering-with-confetti_123891-102420.jpg"
         alt="icon">
-    <div id="intro-div">
+    <div id="intro-div" class="slide-in">
         <section id="intro">
             <p>Happy 40th birthday, Mama. I was scrambling to think about what to make you for this one. I always like
                 to make you something personal, and every year something comes to mind, but this year was different. I
@@ -67,10 +100,12 @@
                 by your birthday, but I will work on this till I think it’s done and I should be ready to give you
                 something till your birthday. And don’t worry, I also have a store bought gift that I think you will
                 love.
-
             </p>
-            <img class="bday-image" src="https://lh3.googleusercontent.com/fife/ALs6j_EsgcgTvee3PCOtjgp4gwsUamvCA1_haa0fpEJDY7Tq0hF6b3f5GtxqRdjNZvxCiBLvGn6J58lJabmb4Htm74_uoj4cnISsnN-S1NJBIFJ-Xn4ip25_11XY69IatXSmbPbTRUMBj0xwzOcOZUV9DbOxW9T-yOwdOfYCfkgnHVyPwjyFGvHVd-vcOKUSwpYVaK4ZPRMwLTEPhujXCUf4LQwy_ArcYT_NEp-_tA9IB2Czcgot41VvfPTqAca-yXqrnZ30Cg0T2vHsremwWq0l84lvk3qUDD8lCOZ5qUBsCUoNNghJsazZ9tRUob_CHDCHuoxPqRAD8HY_PtalQ8Us9pch_pCMT7Einf6e8w5_WiXYZ1wlstXr11ASCI3X-cN1aqmaW5ocjKpRyjRc2ZPDsRzdamraIR1Z7G5K4AaLb2hPOCMOP-bPHiwWZ43LOZDGq9C32-VS1srr1FMtF2gBi5UOtlaWXFI8usdd39feD227z56VVITlpBseDJz06pMNJDBfNGURLQbBw13CocF9Mh-Qd09sts5RGoT4_9JWGaToUnTLresbT-LKcyS1pELQ_tw9-3sj2pYo4tI7EH3j_3DQQU8WRLlstQabQ91taashBRGSVaIu9dzgzNNehLExAMRi53OpUY3fpcuZvpOcfxXHGXLNgJdY7MdYYVC1EmuZ_K990WkZqdIAVHIQ71248oCKnpqzhdSQxb65WFBthAE0-SMYCiRSXGsQNx-FzRd0m5LgPKPTvrvkgMXt-jQwZLG6diJewaBtM2zp-qvqAmeDMqSCXE9XKnYr269upTK7LMWChwcLhMkgBHrXBp0_mfNKxuGuzptKNfz9wb_Z5rteO4ePskWfNRktjFjxJHlUjlJwXwapj5zzEshZMSWp95ZykuZsdffe3QbInh9m9g2-Ojav4Eqmmyv2WeAoutmo054co_u3EMXBabEXJtfTrVkNsBq60MWlTo3c-lGlSVF4vNvi9vmLMIg_rb9RtzOrwXT9hSLzbPhgaS1g1JdbaEeLag=w1860-h880?authuser=0" alt="private">
-            <p class="think">This is likely the most important birthday of your life, marking the halfway point of your
+            <img class="bday-image slide-in"
+                src="https://lh3.googleusercontent.com/fife/ALs6j_EsgcgTvee3PCOtjgp4gwsUamvCA1_haa0fpEJDY7Tq0hF6b3f5GtxqRdjNZvxCiBLvGn6J58lJabmb4Htm74_uoj4cnISsnN-S1NJBIFJ-Xn4ip25_11XY69IatXSmbPbTRUMBj0xwzOcOZUV9DbOxW9T-yOwdOfYCfkgnHVyPwjyFGvHVd-vcOKUSwpYVaK4ZPRMwLTEPhujXCUf4LQwy_ArcYT_NEp-_tA9IB2Czcgot41VvfPTqAca-yXqrnZ30Cg0T2vHsremwWq0l84lvk3qUDD8lCOZ5qUBsCUoNNghJsazZ9tRUob_CHDCHuoxPqRAD8HY_PtalQ8Us9pch_pCMT7Einf6e8w5_WiXYZ1wlstXr11ASCI3X-cN1aqmaW5ocjKpRyjRc2ZPDsRzdamraIR1Z7G5K4AaLb2hPOCMOP-bPHiwWZ43LOZDGq9C32-VS1srr1FMtF2gBi5UOtlaWXFI8usdd39feD227z56VVITlpBseDJz06pMNJDBfNGURLQbBw13CocF9Mh-Qd09sts5RGoT4_9JWGaToUnTLresbT-LKcyS1pELQ_tw9-3sj2pYo4tI7EH3j_3DQQU8WRLlstQabQ91taashBRGSVaIu9dzgzNNehLExAMRi53OpUY3fpcuZvpOcfxXHGXLNgJdY7MdYYVC1EmuZ_K990WkZqdIAVHIQ71248oCKnpqzhdSQxb65WFBthAE0-SMYCiRSXGsQNx-FzRd0m5LgPKPTvrvkgMXt-jQwZLG6diJewaBtM2zp-qvqAmeDMqSCXE9XKnYr269upTK7LMWChwcLhMkgBHrXBp0_mfNKxuGuzptKNfz9wb_Z5rteO4ePskWfNRktjFjxJHlUjlJwXwapj5zzEshZMSWp95ZykuZsdffe3QbInh9m9g2-Ojav4Eqmmyv2WeAoutmo054co_u3EMXBabEXJtfTrVkNsBq60MWlTo3c-lGlSVF4vNvi9vmLMIg_rb9RtzOrwXT9hSLzbPhgaS1g1JdbaEeLag=w1860-h880?authuser=0"
+                alt="private">
+            <p class="think slide-in">This is likely the most important birthday of your life, marking the halfway point
+                of your
                 life. People say time is like an hourglass, with the sand down representing the past and the sand up top
                 representing the future, which is slowly shrinking. This is the only point in your life when the sand is
                 equal, and from now on, there will be more sand in the bottom than the top. Half your life is over, but
@@ -81,28 +116,21 @@
                 and only makes sense backwards. So don’t worry about the future; don’t worry about the lemons life will
                 throw at you; just remember, in the end, all will work out. All you have to do is make lemonade. Oh and
                 I’m not this wise I took some inspiration from the internet.</p>
-            <img class="vr-park" src="img/vr park.png" alt="anything">
-
-            <p>I love you mama for everything you do for me and everything you have ever done for me. You take care of
+            <img class="vr-park slide-in"
+                src="https://raw.githubusercontent.com/RoyalKeyboard911/Mom-brithday/refs/heads/main/mom-vr-work.png"
+                alt="anything">
+            <p class="slide-in">I love you mama for everything you do for me and everything you have ever done for me.
+                You take care of
                 me and you do everything for me. Without you I dont know what my life would be like. I know sometimes I
                 dont show that apreciation but I want you to know that no matter what I say or what I do I will always
                 love you. </p>
-
-                <img class="heart"src="https://cdn-icons-gif.flaticon.com/11186/11186871.gif" alt="gif">
-                <p>Here is a poster I made for you: </p>
-                <img class= "poster"src="img/poster-mom.png" alt="random">
-                <iframe src="https://drive.google.com/file/d/141MMUxoeuyjCxdu3AJYJ0o1b2gnUuKlx/preview" width="640" height="480" allow="autoplay"></iframe>
-
-
-
-
-                
-            <section>
-
-
+            <img class="heart slide-in" src="https://cdn-icons-gif.flaticon.com/11186/11186871.gif" alt="gif">
+            <p class="slide-in">Here is a poster I made for you: </p>
+            <img class="poster slide-in"
+                src="https://raw.githubusercontent.com/RoyalKeyboard911/Mom-brithday/refs/heads/main/poster-mom.png"
+                alt="random">
+        </section>
     </div>
 </body>
-
-
 
 </html>
